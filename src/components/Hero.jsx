@@ -5,9 +5,10 @@ const { personal } = portfolioData
 
 const ROLES = [
   'Data Analyst',
-  'Salesforce Architect',
+  'Salesforce Data Analytics Consultant',
+  'CRM Analytics Engineer',
   'Analytics Engineer',
-  'BI Developer',
+  'Data Engineer',
 ]
 
 export default function Hero() {
@@ -126,6 +127,14 @@ export default function Hero() {
             className="px-7 py-3 border border-parchment-300 text-slate-500 font-mono text-sm tracking-widest uppercase hover:border-slate-400 hover:text-slate-900 transition-colors"
           >
             GitHub
+          </a>
+          <a
+            href={personal.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-7 py-3 border border-blue-300 text-blue-500 font-mono text-sm tracking-widest uppercase hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-colors"
+          >
+            LinkedIn
           </a>
         </div>
 

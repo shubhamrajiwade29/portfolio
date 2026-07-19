@@ -56,7 +56,7 @@ export default function About() {
                   { label: 'Education', value: personal.education },
                   { label: 'Currently', value: personal.currentRole },
                   { label: 'Previously', value: 'Deloitte · TCS' },
-                  { label: 'Target Roles', value: 'Data Analyst · Salesforce' },
+                  { label: 'Target Roles', value: 'Data Analyst · CRM Analytics · Data Engineering' },
                 ].map(({ label, value }) => (
                   <div key={label} className="border-l-2 border-gold-400/50 pl-3">
                     <div className="font-mono text-[10px] text-slate-400 tracking-widest uppercase">{label}</div>
