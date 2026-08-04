@@ -26,14 +26,13 @@ export default function Contact() {
 
           <FadeUp delay="delay-100">
             <p className="font-body text-slate-500 text-lg leading-relaxed mb-12">
-              Targeting <strong className="text-slate-800">Data Analytics</strong>, <strong className="text-slate-800">CRM/Salesforce Analytics</strong>, and <strong className="text-slate-800">Data Engineering</strong> roles for after graduation (Dec 2026). Open to co-op extensions, contract work, or full-time conversations now.
+              Targeting <strong className="text-slate-800">Salesforce</strong> and <strong className="text-slate-800">Analytics Engineering</strong> roles for full-time from Jan 2027, after my MS at Northeastern. Open to contract work and conversations now.
             </p>
           </FadeUp>
 
           <div className="flex flex-col gap-4">
             {[
-              { icon: '✉', label: 'Email', value: 'shubhamrajiwade29@gmail.com', href: 'mailto:shubhamrajiwade29@gmail.com', color: 'text-gold-500' },
-              { icon: '✉', label: 'Email (NEU)', value: personal.email, href: `mailto:${personal.email}`, color: 'text-gold-500' },
+              { icon: '✉', label: 'Email', value: personal.email, href: `mailto:${personal.email}`, color: 'text-gold-500' },
               { icon: 'in', label: 'LinkedIn', value: 'linkedin.com/in/shubhamrajiwade', href: personal.linkedin, color: 'text-blue-600' },
               { icon: '⌥', label: 'GitHub', value: 'github.com/shubhamrajiwade29', href: personal.github, color: 'text-slate-600' },
             ].map((item, i) => (

@@ -41,8 +41,8 @@ export default function About() {
           <div className="order-1 md:order-2">
             <FadeUp>
               <h2 className="font-display text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-                The Data Guy <br />
-                <span className="text-gradient italic">Who Knows CRM</span>
+                Where Salesforce <br />
+                <span className="text-gradient italic">Meets Data</span>
               </h2>
             </FadeUp>
             <FadeUp delay="delay-100">
@@ -56,7 +56,7 @@ export default function About() {
                   { label: 'Education', value: personal.education },
                   { label: 'Currently', value: personal.currentRole },
                   { label: 'Previously', value: 'Deloitte · TCS' },
-                  { label: 'Target Roles', value: 'Data Analyst · CRM Analytics · Data Engineering' },
+                  { label: 'Target Roles', value: 'Salesforce Dev · Analytics Engineer' },
                 ].map(({ label, value }) => (
                   <div key={label} className="border-l-2 border-gold-400/50 pl-3">
                     <div className="font-mono text-[10px] text-slate-400 tracking-widest uppercase">{label}</div>
