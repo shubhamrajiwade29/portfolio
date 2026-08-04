@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import { portfolioData } from '../data/portfolio'
+import { NumberTicker } from './Animate'
 
 const { personal } = portfolioData
 
@@ -107,35 +109,47 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-4 justify-center mb-16 opacity-0 animate-fade-up animate-delay-400">
-          <button
+          <motion.button
             onClick={() => scrollTo('projects')}
-            className="group relative px-7 py-3 bg-slate-900 text-parchment-50 font-mono text-sm font-bold tracking-widest uppercase overflow-hidden transition-transform hover:scale-105"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ duration: 0.2 }}
+            className="group relative px-7 py-3 bg-slate-900 text-parchment-50 font-mono text-sm font-bold tracking-widest uppercase overflow-hidden"
           >
             <span className="relative z-10">View Projects</span>
             <span className="absolute inset-0 bg-gold-500 translate-y-full group-hover:translate-y-0 transition-transform duration-200" />
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={() => scrollTo('contact')}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ duration: 0.2 }}
             className="px-7 py-3 border border-gold-400/60 text-gold-500 font-mono text-sm tracking-widest uppercase hover:bg-gold-400/10 transition-colors"
           >
             Contact Me
-          </button>
-          <a
+          </motion.button>
+          <motion.a
             href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ duration: 0.2 }}
             className="px-7 py-3 border border-parchment-300 text-slate-500 font-mono text-sm tracking-widest uppercase hover:border-slate-400 hover:text-slate-900 transition-colors"
           >
             GitHub
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ duration: 0.2 }}
             className="px-7 py-3 border border-blue-300 text-blue-500 font-mono text-sm tracking-widest uppercase hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-colors"
           >
             LinkedIn
-          </a>
+          </motion.a>
         </div>
 
         {/* Stats */}
@@ -144,10 +158,10 @@ export default function Hero() {
             { value: '4', label: 'IT Experience', suffix: 'yr' },
             { value: '5', label: 'Salesforce Certs', suffix: 'x' },
             { value: '7', label: 'Projects Shipped', suffix: '' },
-          ].map(({ value, label, suffix }) => (
+          ].map(({ value, label, suffix }, i) => (
             <div key={label} className="border border-parchment-300 bg-white/60 py-4 px-2 text-center shadow-sm">
               <div className="font-mono font-bold text-2xl text-gold-500">
-                {value}<span className="text-sm opacity-60">{suffix}</span>
+                <NumberTicker value={value} delay={`delay-${i * 150}`} /><span className="text-sm opacity-60">{suffix}</span>
               </div>
               <div className="font-mono text-xs text-slate-400 mt-1 leading-tight">{label}</div>
             </div>

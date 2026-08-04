@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { portfolioData } from '../data/portfolio'
 import { FadeUp, FadeIn } from './Animate'
 
@@ -15,7 +16,11 @@ const TYPE_COLORS = {
 function DataProjectCard({ project, index }) {
   return (
     <FadeUp delay={`delay-${(index % 2) * 100}`}>
-      <div className="border border-parchment-300 bg-white/80 p-6 flex flex-col card-hover h-full shadow-sm">
+      <motion.div
+        whileHover={{ y: -6, borderColor: 'rgba(201, 168, 76, 0.5)', boxShadow: '0 12px 40px rgba(28, 25, 23, 0.08)' }}
+        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        className="border border-parchment-300 bg-white/80 p-6 flex flex-col h-full shadow-sm"
+      >
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
             <div className={`inline-block font-mono text-[10px] tracking-widest uppercase px-2 py-0.5 border mb-3 ${TYPE_COLORS[project.type] || 'text-slate-500 border-slate-300'}`}>
@@ -48,7 +53,7 @@ function DataProjectCard({ project, index }) {
             <span className="font-mono text-xs text-slate-400 tracking-widest">Links coming soon</span>
           )}
         </div>
-      </div>
+      </motion.div>
     </FadeUp>
   )
 }
@@ -58,7 +63,11 @@ function ProductProjectCard({ project, index }) {
 
   return (
     <FadeUp delay={`delay-${index * 150}`}>
-      <div className="border border-parchment-300 bg-white/80 flex flex-col card-hover shadow-sm">
+      <motion.div
+        whileHover={{ y: -6, borderColor: 'rgba(201, 168, 76, 0.5)', boxShadow: '0 12px 40px rgba(28, 25, 23, 0.08)' }}
+        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        className="border border-parchment-300 bg-white/80 flex flex-col shadow-sm"
+      >
         {/* Header */}
         <div className="p-6 pb-4">
           <div className="flex items-start justify-between gap-4 mb-3">
@@ -120,7 +129,7 @@ function ProductProjectCard({ project, index }) {
             <span className="font-mono text-xs text-slate-400 tracking-widest uppercase">NEU · {project.subtitle.split('·')[0].trim()}</span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </FadeUp>
   )
 }
