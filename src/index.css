@@ -47,7 +47,7 @@
   }
   .sec-sub { color: var(--muted); margin-bottom: 2rem; max-width: 40rem; }
   .lead-chip {
-    display: inline-block; font-size: 0.76rem; font-weight: 600; padding: 0.25rem 0.7rem;
+    display: block; width: fit-content; font-size: 0.76rem; font-weight: 600; padding: 0.25rem 0.7rem;
     border-radius: 0.4rem; margin-bottom: 0.8rem; color: #6d28d9; background: #f0eefe; border: 1px solid #ddd6fe;
   }
   .chip {
