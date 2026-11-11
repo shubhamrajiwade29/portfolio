@@ -1,23 +1,29 @@
-import useInView from '../hooks/useInView'
+import { useEffect, useRef, useState } from 'react'
+import { motion, animate, useInView } from 'framer-motion'
+
+const EASE = [0.16, 1, 0.3, 1]
+const viewport = { once: true, margin: '-60px' }
+
+function parseDelay(delay) {
+  const match = /(\d+)/.exec(delay)
+  return match ? Number(match[1]) / 1000 : 0
+}
 
 /**
  * FadeUp — fades and slides up when scrolled into view
- * delay: tailwind delay class like 'delay-100', 'delay-200', etc.
+ * delay: 'delay-N' string (N in ms), kept for backward compatibility with existing call sites
  */
 export function FadeUp({ children, delay = '', className = '' }) {
-  const [ref, inView] = useInView()
-
   return (
-    <div
-      ref={ref}
-      className={`transition-all duration-700 ease-out ${delay} ${
-        inView
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-8'
-      } ${className}`}
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={viewport}
+      transition={{ duration: 0.7, delay: parseDelay(delay), ease: EASE }}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 
@@ -25,17 +31,16 @@ export function FadeUp({ children, delay = '', className = '' }) {
  * FadeIn — pure fade, no movement
  */
 export function FadeIn({ children, delay = '', className = '' }) {
-  const [ref, inView] = useInView()
-
   return (
-    <div
-      ref={ref}
-      className={`transition-opacity duration-700 ease-out ${delay} ${
-        inView ? 'opacity-100' : 'opacity-0'
-      } ${className}`}
+    <motion.div
+      className={className}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={viewport}
+      transition={{ duration: 0.7, delay: parseDelay(delay), ease: EASE }}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 
@@ -43,19 +48,16 @@ export function FadeIn({ children, delay = '', className = '' }) {
  * SlideIn — slides in from left
  */
 export function SlideIn({ children, delay = '', className = '' }) {
-  const [ref, inView] = useInView()
-
   return (
-    <div
-      ref={ref}
-      className={`transition-all duration-700 ease-out ${delay} ${
-        inView
-          ? 'opacity-100 translate-x-0'
-          : 'opacity-0 -translate-x-8'
-      } ${className}`}
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, x: -32 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={viewport}
+      transition={{ duration: 0.7, delay: parseDelay(delay), ease: EASE }}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 
@@ -63,18 +65,38 @@ export function SlideIn({ children, delay = '', className = '' }) {
  * ScaleIn — scales up from slightly smaller
  */
 export function ScaleIn({ children, delay = '', className = '' }) {
-  const [ref, inView] = useInView()
-
   return (
-    <div
-      ref={ref}
-      className={`transition-all duration-700 ease-out ${delay} ${
-        inView
-          ? 'opacity-100 scale-100'
-          : 'opacity-0 scale-95'
-      } ${className}`}
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, scale: 0.92 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={viewport}
+      transition={{ duration: 0.6, delay: parseDelay(delay), ease: EASE }}
     >
       {children}
-    </div>
+    </motion.div>
   )
+}
+
+/**
+ * NumberTicker — counts up from 0 to `value` once scrolled into view
+ */
+export function NumberTicker({ value, delay = '', className = '' }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, viewport)
+  const [display, setDisplay] = useState(0)
+  const target = Number(value)
+
+  useEffect(() => {
+    if (!isInView) return
+    const controls = animate(0, target, {
+      duration: 1.4,
+      delay: parseDelay(delay),
+      ease: EASE,
+      onUpdate: (v) => setDisplay(Math.round(v)),
+    })
+    return () => controls.stop()
+  }, [isInView, target])
+
+  return <span ref={ref} className={className}>{display}</span>
 }
