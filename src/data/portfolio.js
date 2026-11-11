@@ -8,6 +8,7 @@ export const portfolioData = {
     email: 'rajiwade.s@northeastern.edu',
     github: 'https://github.com/shubhamrajiwade29',
     linkedin: 'https://www.linkedin.com/in/shubhamrajiwade',
+    trailblazer: 'https://www.salesforce.com/trailblazer/shubhamrj29',
     education: 'MSEM @ Northeastern University (Dec 2026)',
     currentRole: 'MSEM @ Northeastern · Open to Full-Time (Jan 2027)',
   },

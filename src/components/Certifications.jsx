@@ -1,7 +1,7 @@
 import { portfolioData } from '../data/portfolio'
 import { FadeUp } from './Animate'
 
-const { certifications } = portfolioData
+const { certifications, personal } = portfolioData
 const activeCount = certifications.filter((c) => c.status === 'active').length
 
 export default function Certifications() {
@@ -10,7 +10,7 @@ export default function Certifications() {
       <div className="wrap">
         <FadeUp>
           <h2 className="sec-h">Certifications</h2>
-          <p className="sec-sub">{certifications.length} Salesforce certifications earned · {activeCount} active.</p>
+          <p className="sec-sub">{certifications.length} Salesforce certifications earned · {activeCount} active. <a href={personal.trailblazer} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--violet)', fontWeight: 600 }}>Verify on Trailblazer ↗</a></p>
           <div className="cgrid">
             {certifications.map((c) => {
               const expired = c.status === 'expired'
