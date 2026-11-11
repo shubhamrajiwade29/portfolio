@@ -62,7 +62,7 @@ export default function Projects() {
       <section id="data" className="section">
         <div className="wrap">
           <FadeUp>
-            <h2 className="sec-h">Data, analytics &amp; AI</h2>
+            <h2 className="sec-h">Data, Analytics &amp; AI</h2>
             <p className="sec-sub">Independent projects — the data foundation behind the platform work.</p>
             <div className="dgrid">
               {dataProjects.map((p) => (
