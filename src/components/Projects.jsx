@@ -16,6 +16,11 @@ function SfCard({ p }) {
         <div><div className="fk">Impact</div><div className="fv imp">{p.impact}</div></div>
         <div><div className="fk">Tech</div><div>{p.tech.map((t) => <span className="chip" key={t}>{t}</span>)}</div></div>
       </div>
+      {p.github && (
+        <div className="dlinks">
+          <a href={p.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      )}
     </div>
   )
 }
@@ -53,7 +58,7 @@ export default function Projects() {
           <FadeUp>
             <span className="lead-chip">Lead practice</span>
             <h2 className="sec-h">Salesforce case studies</h2>
-            <p className="sec-sub">Enterprise CRM across Health Cloud, FSC and Service Cloud — real client and clinical engagements.</p>
+            <p className="sec-sub">Enterprise CRM across Health Cloud, FSC and Service Cloud — real client and clinical engagements — plus an open-source Agentforce build.</p>
             <div className="feat">{salesforceProjects.map((p) => <SfCard key={p.title} p={p} />)}</div>
           </FadeUp>
         </div>

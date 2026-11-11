@@ -100,6 +100,16 @@ export const portfolioData = {
       tech: ['Health Cloud', 'React', 'FastAPI', 'SQL Server', 'REST'],
     },
     {
+      org: 'Personal project · open source',
+      tag: 'Agentforce',
+      title: 'Care Gap Agent',
+      problem: 'Care coordinators hunt across records to find which patients are overdue for screenings and labs, so follow-ups slip.',
+      built: 'A care-gap tracker on standard Salesforce objects — bulk-safe Apex service/selector layers with FLS enforcement, a record-page LWC with Mark scheduled / Close actions, a dedicated Lightning app with list views, reports and a dashboard — plus an Agentforce agent that finds a patient by name and answers "what is open for this patient?" through two invocable Apex actions.',
+      impact: 'All Apex tests passing at 97%+ coverage; agent tested in Agentforce Builder across name lookup, overdue flagging, unknown patients and ambiguous names.',
+      tech: ['Agentforce', 'Apex', 'LWC', 'Invocable Actions', 'Lightning App', 'Salesforce DX'],
+      github: 'https://github.com/shubhamrajiwade29/care-gap-agent',
+    },
+    {
       org: 'Deloitte USI',
       tag: 'Enterprise',
       title: 'Enterprise Salesforce Implementations',
