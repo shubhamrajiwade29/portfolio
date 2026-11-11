@@ -22,7 +22,7 @@ export default function Certifications() {
                   <span className={`cstatus ${expired ? 'exp' : 'active'}`}>{expired ? 'Expired' : 'Active'}</span>
                   {c.verify
                     ? <a className="cverify" href={import.meta.env.BASE_URL + c.verify} target="_blank" rel="noopener noreferrer">Verify ↗</a>
-                    : <span className="cverify none">Lapsed</span>}
+                    : <a className="cverify" href={personal.trailblazer} target="_blank" rel="noopener noreferrer">On Trailblazer ↗</a>}
                 </div>
               )
             })}

@@ -45,7 +45,7 @@ export const portfolioData = {
     { name: 'Administrator', credential: 'Salesforce Certified Administrator', year: 'Dec 2021', badge: 'ADM', status: 'active', verify: 'certs/administrator.pdf' },
     { name: 'Platform App Builder', credential: 'Salesforce Certified Platform App Builder', year: 'Jan 2022', badge: 'PAB', status: 'active', verify: 'certs/platform-app-builder.pdf' },
     { name: 'Agentforce Sales Consultant', credential: 'Salesforce Certified Agentforce Sales Consultant', year: 'Feb 2023', badge: 'ASC', status: 'active', verify: 'certs/agentforce-sales-consultant.pdf' },
-    { name: 'JavaScript Developer I', credential: 'Salesforce Certified JavaScript Developer I', year: 'Expired 2025', badge: 'JD1', status: 'expired', verify: null },
+    { name: 'JavaScript Developer I', credential: 'Salesforce Certified JavaScript Developer I', year: 'Renewed', badge: 'JD1', status: 'active', verify: null },
   ],
 
   experience: [
