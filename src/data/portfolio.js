@@ -108,6 +108,7 @@ export const portfolioData = {
       impact: 'All Apex tests passing at 97%+ coverage; agent tested in Agentforce Builder across name lookup, overdue flagging, unknown patients and ambiguous names.',
       tech: ['Agentforce', 'Apex', 'LWC', 'Invocable Actions', 'Lightning App', 'Salesforce DX'],
       github: 'https://github.com/shubhamrajiwade29/care-gap-agent',
+      caseStudy: 'https://github.com/shubhamrajiwade29/care-gap-agent/blob/main/docs/CASE_STUDY.md',
     },
     {
       org: 'Deloitte USI',

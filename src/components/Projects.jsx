@@ -16,9 +16,10 @@ function SfCard({ p }) {
         <div><div className="fk">Impact</div><div className="fv imp">{p.impact}</div></div>
         <div><div className="fk">Tech</div><div>{p.tech.map((t) => <span className="chip" key={t}>{t}</span>)}</div></div>
       </div>
-      {p.github && (
+      {(p.github || p.caseStudy) && (
         <div className="dlinks">
-          <a href={p.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          {p.caseStudy && <a href={p.caseStudy} target="_blank" rel="noopener noreferrer">Case study ↗</a>}
+          {p.github && <a href={p.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>}
         </div>
       )}
     </div>
