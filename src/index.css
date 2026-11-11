@@ -148,7 +148,7 @@
 
   /* nav */
   .nav { position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-  .nav-in { max-width: 64rem; margin: 0 auto; padding: .8rem 1.3rem; display: flex; justify-content: space-between; align-items: center; }
+  .nav-in { max-width: 64rem; margin: 0 auto; padding: .8rem 1.3rem; display: flex; justify-content: center; align-items: center; }
   .nav-brand { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.1rem; }
   .nav-links { display: flex; gap: 1.4rem; }
   .nav-links a { font-size: .88rem; color: var(--muted); }
