@@ -4,10 +4,10 @@ import { portfolioData } from '../data/portfolio'
 const { personal } = portfolioData
 
 const ROLES = [
-  'Data Analyst',
-  'Salesforce Architect',
-  'Analytics Engineer',
-  'BI Developer',
+  'Salesforce Developer',
+  'Salesforce Consultant',
+  'Salesforce Administrator',
+  'Salesforce Analyst',
 ]
 
 export default function Hero() {
@@ -134,7 +134,7 @@ export default function Hero() {
           {[
             { value: '4', label: 'IT Experience', suffix: 'yr' },
             { value: '5', label: 'Salesforce Certs', suffix: 'x' },
-            { value: '4+', label: 'Projects Shipped', suffix: '' },
+            { value: '7', label: 'Projects Shipped', suffix: '' },
           ].map(({ value, label, suffix }) => (
             <div key={label} className="border border-parchment-300 bg-white/60 py-4 px-2 text-center shadow-sm">
               <div className="font-mono font-bold text-2xl text-gold-500">

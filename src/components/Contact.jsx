@@ -26,7 +26,7 @@ export default function Contact() {
 
           <FadeUp delay="delay-100">
             <p className="font-body text-slate-500 text-lg leading-relaxed mb-12">
-              Targeting <strong className="text-slate-800">Data</strong> and <strong className="text-slate-800">Salesforce</strong> roles for after graduation (Dec 2026). Open to co-op extensions, contract work, or full-time conversations now.
+              Targeting <strong className="text-slate-800">Salesforce</strong> and <strong className="text-slate-800">Analytics Engineering</strong> roles for full-time from Jan 2027, after my MS at Northeastern. Open to contract work and conversations now.
             </p>
           </FadeUp>
 

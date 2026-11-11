@@ -13,7 +13,7 @@ const SKILL_GROUPS = [
 const PROFICIENCY = {
   SQL: 90, Python: 80, Tableau: 85, 'Power BI': 75, dbt: 65, Pandas: 78, Matplotlib: 72,
   AWS: 65, 'Azure (ADF + Databricks)': 70, 'GitHub Actions': 68, Snowflake: 60,
-  'Sales Cloud': 90, 'Service Cloud': 85, 'Experience Cloud': 80, 'Flow Builder': 88, 'Apex (basics)': 60, SOQL: 85,
+  'Sales Cloud': 90, 'Service Cloud': 85, 'Experience Cloud': 80, 'Flow Builder': 88, 'Apex': 60, SOQL: 85,
   React: 70, Vite: 65, FastAPI: 68, MySQL: 82, Excel: 85, Figma: 55,
 }
 
