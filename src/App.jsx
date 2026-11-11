@@ -9,7 +9,7 @@ import Contact from './components/Contact'
 
 export default function App() {
   return (
-    <div className="bg-parchment-50 min-h-screen">
+    <div className="min-h-screen">
       <Navbar />
       <Hero />
       <About />
