@@ -159,7 +159,7 @@
   .hero h1 { font-size: clamp(2.6rem, 8vw, 4.6rem); font-weight: 700; line-height: 1; margin-bottom: .7rem; }
   .hero .role { font-size: clamp(1.1rem, 2.6vw, 1.5rem); font-weight: 600; color: var(--violet); min-height: 1.5em; margin-bottom: 1rem; }
   .hero .role .cur { color: #c9b8f5; }
-  .hero p.lead { font-size: 1.12rem; color: var(--muted); max-width: 38rem; margin: 0 auto 2rem; }
+  .hero p.lead { font-size: 1.12rem; color: var(--muted); max-width: 46rem; margin: 0 auto 2rem; text-wrap: balance; }
   .btns { display: flex; gap: .75rem; flex-wrap: wrap; margin-bottom: 3rem; justify-content: center; }
   .cred .n { font-family: 'Space Grotesk'; font-size: 1.75rem; font-weight: 700; color: var(--violet); }
   .cred .l { font-size: .8rem; color: var(--muted); }
